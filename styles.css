@@ -1,0 +1,276 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0%;
+}
+
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+p{font-size: 1.25em;}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+
+
+header{
+    background-color: rgb(245,245,245);
+    position: fixed;
+        width: 100%;
+}
+
+header .logo{
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: blueviolet;
+    font-size: 1.6em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+header a:hover{
+    color: blueviolet;
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgb(0,0,0,0.5),
+        rgb(0,0,0,0.5)
+    )
+     ,url(imgdef/hero2.png);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center center;
+     color: white;
+     
+}
+
+#productos{
+    background-color: rgb(30,30,30);
+    text-align: center;
+    color: white;
+
+}
+
+#productos .container{
+    text-align: center;
+    padding: 100px 12px;
+}
+
+#productos .carta{
+    background-size: cover;
+     background-position: center center;
+     padding: 50px;
+     margin: 20px;
+     border-radius: 15px;
+
+}
+
+.carta:first-child{
+    background-image: linear-gradient(
+        0deg,
+        rgb(0,0,0,0.5),
+        rgb(0,0,0,0.5)
+    )
+     ,url(imgdef/tienda1.png);
+
+}
+    
+.carta:nth-child(2){
+    background-image: linear-gradient(
+        0deg,
+        rgb(0,0,0,0.5),
+        rgb(0,0,0,0.5)
+    )
+     ,url(imgdef/tienda2.png);
+
+}
+
+.carta:nth-child(3){
+    background-image: linear-gradient(
+        0deg,
+        rgb(0,0,0,0.5),
+        rgb(0,0,0,0.5)
+    )
+     ,url(imgdef/tienda3.png);
+    
+}
+
+
+
+#blog .container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+
+footer{
+    background-color: rgb(230, 230, 230);
+}
+
+footer p{
+    margin: 0;
+    color: rgb(100, 100, 100);
+    padding: 12px;
+}
+
+footer .container{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+@media  (min-width: 754px){
+    header{
+        position: fixed;
+        width: 100%;
+    }
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+
+    #productos .img-produc{
+        display: flex;
+        justify-content: center;
+    }
+    
+    #productos p{
+        display: block;
+    }
+    
+    #productos .carta{
+        padding: 15px;
+    }
+
+    #blog .container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    #blog .texto{
+        width: 50%;
+        text-align: initial;
+        max-width: 600px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #blog h2{
+        margin-top: 0px;
+    }
+
+    #blog .cont-img-blog{
+        background-image: url(imgdef/blog3.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 400px;
+        width: 300px;
+        background-repeat: no-repeat;
+
+    }
+
+    
+
+}
+
+
+/* APARTADO "TIENDA" */
+
+#banner_tienda{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgb(0,0,0,0.5),
+        rgb(0,0,0,0.5)
+    )
+     ,url(imgdef/tienda_banner.jpg);
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center center;
+     color: white;
+     
+}
+
+.repertorio h1{
+    font-size: 30px ;
+    text-align: center;
+}
+
+
+.contenedor2{
+    width: 100%;
+    margin: auto;
+
+}
+
+img{
+    width: 100%;
+}
+
+.en_venta{
+    margin: 5px;
+}
+
+.repertorio .contenedor2{
+    display: grid;
+
+}
+
+@media (min-width: 520px){
+    .repertorio .contenedor2{
+        grid-template-columns: repeat(2,50%);
+    }
+}
+
+@media (min-width: 1024px){
+    .repertorio .contenedor2{
+        grid-template-columns: repeat(3,33.3%);
+    }
+}
+
+
